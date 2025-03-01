@@ -8,9 +8,9 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  </head>
+
 </head>
-<body class="poppins-regular  mx-auto  px-10 bg-[]">
+<body id="body" class="poppins-regular  mx-auto  px-10">
    <header class="bg-[#f3efef] rounded-2xl">
     <div class="navbar ">
         <div class="flex-1 gap-5">
@@ -25,7 +25,7 @@
           
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
-                <img src="assets/theme-btn.png" alt="">
+                <img id="change-color" src="assets/theme-btn.png" alt="">
               </div>
             </div>
         </div>
@@ -45,8 +45,7 @@
            </div>
         </div>
 
-
-        <div class="bg-[#3752FD]  border col-span-2 flex items-center gap-7  rounded-2xl">
+        <div id="blog-question" class="bg-linear-[25deg,blue_5%,blue_0%,white_100%,teal]  col-span-2 flex items-center gap-7  rounded-2xl">
            <div class="">
             <img src="assets/board.png" alt="">
            </div>
@@ -55,12 +54,11 @@
         <div class="rounded-2xl bg-[#F4F7FF] ">
             <div class=" flex gap-4 items-center p-5">
                 <div class=" bg-[#FFFFFF] p-4 rounded-full">
-                    <img src="assets/checkbox.png" alt="">
+                    <img src="assets/calender.png" alt="">
                 </div>
-                <div class="">
-                     <p class="text-[#004455]">Wed ,  </p> 
-                     <h1 class="text-xl font-semibold">
-                        Jul 28 2025 </h1>
+                <div>
+                    <h5 id="time-day" class="title-text-color"></h5>
+                    <p id="time-date" class="title-text-color font-bold"></p>
                 </div>
            </div>
         </div>
@@ -73,21 +71,22 @@
                     <h1 class="text-2xl font-semibold mb-7">Activity Log</h1>
                 </div>
             </div>
-            <button class="btn bg-[#3752FD] mb-10 text-white text-lg">Clear History</button>
+            <button id="clear-btn" class="btn bg-[#3752FD] mb-10 text-white text-lg">Clear History</button>
+            <div id="container">
+               
+            </div>
         </div>
         <div class="grid grid-cols-3 col-span-4 gap-5 mt-10">
                 <div class="rounded-2xl p-3 bg-[#F4F7FF]">
                     <h2 class="text-[#00303C] mb-3 mt-3">ShopEase</h2>
-                    <h1 class="text-[#00303C] text-2xl font-semibold mb-3">Fix Mobile Button Issue </h1>
+                    <h1  id="praValue" class="text-[#00303C] text-2xl font-semibold mb-3">Fix Mobile Button Issue </h1>
                     <p class=" bg-white p-2 mb-3 rounded-2xl">Debug using Chrome DevTools, check for overlapping ...</p>
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                                <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class="btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
                 <div class=" p-3 bg-[#F4F7FF] rounded-2xl">
@@ -97,11 +96,9 @@
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                                <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class=" btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
                 <div class="rounded-2xl p-3 bg-[#F4F7FF]">
@@ -111,11 +108,9 @@
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                                <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class="btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
                 <div class="rounded-2xl p-3 bg-[#F4F7FF]">
@@ -125,11 +120,9 @@
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                                <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class="btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
                 <div class="rounded-2xl p-3 bg-[#F4F7FF]">
@@ -139,11 +132,9 @@
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                                <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class="btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
                 <div class="rounded-2xl p-3 bg-[#F4F7FF]">
@@ -153,11 +144,9 @@
                         <div class=" flex justify-around">
                             <div>
                                 <h2>Deadline</h2>
-                                <h1 class="font-medium">21 March 2025</h1>
+                               <p class="font-medium">21 March 2025</p>
                             </div>
-                            <div>
                                 <button id="btnComplect" class="btn bg-[#3752FD]">Completed</button>
-                            </div>
                         </div>
                 </div>
         </div>
